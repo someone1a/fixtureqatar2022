@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="res/css/all.css">
+    <script src="res/js/notification.js"></script>
+    <script src="res/js/contador.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./res/img/qatar-logo.png" alt="">
+        <div class="tx-center">
+            <h1>Qatar 2022 fixture</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="tx-right">
+            <a href="index.html">Inicio</a>
+            <a href="">Sobre Nosotros</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>Dias Faltantes para Qatar 2022</h2>
+            <section>
+                <p>
+                    <span id="days"></span> días / <span id="hours"></span> horas / <span id="minutes"></span> minutos /
+                    <span id="seconds"></span> segundos
+                </p>
+            </section>
+        </div>
+        <h2 class="tx-center">Grupos de la copa Mundial Qatar 2022</h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col l-ch bg-white up">
+                    <span class="group-name">Grupo A</span>
+                    <ul class="l-none">
+                        <li data-bs-toggle="modal" data-bs-target="#qatar"><img src="res/img/teams-flag/qatar-flag.png" align="left" class="img-group"> Qatar</li>
+                        <li data-bs-toggle="modal" data-bs-target="#ecuador"><img src="res/img/teams-flag/ecuador-flag.png" align="left" class="img-group"> Ecuador</li>
+                        <li data-bs-toggle="modal" data-bs-target="#pais_bajos"><img src="res/img/teams-flag/paises_bajos-flg.png" align="left" class="img-group"> Países Bajos</li>
+                        <li data-bs-toggle="modal" data-bs-target="#senegal"><img src="res/img/teams-flag/senegal-flag.png" align="left" class="img-group"> Senegal</li>
+                    </ul>
+                </div>
+                <div class="col l-ch bg-black up">
+                    <span class="group-name">Grupo B</span>
+                    <ul class="l-none">
+                        <li><img src="res/img/teams-flag/england-flg.png" alt="Bandera de Inglaterra" class="img-group">
+                            Inglaterra</li>
+                        <li><img src="res/img/teams-flag/usa-flag.png" alt="Bandera de Estados Unidos"
+                                class="img-group"> Estados Unidos</li>
+                        <li><img src="res/img/teams-flag/iran-flag.png" alt="Bandera de Iran" class="img-group"> Iran
+                        </li>
+                        <li><img src="res/img/teams-flag/wales-flag.png" alt="Bandera de Gales" class="img-group"> Gales
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l-ch bg-white up">
+                    <span class="group-name">Grupo C</span>
+                    <ul class="l-none">
+                        <li><img src="res/img/teams-flag/Argentina-flag.png" alt="Bandera de Argentina"
+                                class="img-group"> Argentina</li>
+                        <li><img src="res/img/teams-flag/mexico-flag.png" alt="Bandera de Mexico" class="img-group">
+                            Mexico</li>
+                        <li><img src="res/img/teams-flag/polonia-flag.png" alt="Bandera de Polonia" class="img-group">
+                            Polonia</li>
+                        <li><img src="res/img/teams-flag/arabia-saudita-flag.png" alt="Bandera de Arabia Saudita"
+                                class="img-group"> Arabia Saudita</li>
+                    </ul>
+                </div>
+                <div class="col l-ch bg-black up">
+                    <span class="group-name">Grupo D</span>
+                    <ul class="l-none">
+                        <li><img src="res/img/teams-flag/france-flag.png" alt="Bandera de Francia" class="img-group">
+                            Francia</li>
+                        <li><img src="res/img/teams-flag/dinamarca-flag.png" alt="Bandera de Dinamarca"
+                                class="img-group"> Dinamarca</li>
+                        <li><img src="res/img/teams-flag/tunez-flag.png" alt="Bandera de Túnez" class="img-group"> Túnez
+                        </li>
+                        <li><img src="res/img/teams-flag/australia-flag.png" alt="Bandera de Australia"
+                                class="img-group"> Australia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l-ch bg-black up">
+                    <span class="group-name">Grupo E</span>
+                    <ul class="l-none">
+                        <li><img src="res/img/teams-flag/spain-flag.png" alt="" class="img-group"> España</li>
+                        <li><img src="res/img/teams-flag/germany-flag.png" alt="" class="img-group"> Alemania</li>
+                        <li><img src="res/img/teams-flag/japon-flag.png" alt="" class="img-group"> Japón</li>
+                        <li><img src="res/img/teams-flag/costa-rica-flag.png" alt="" class="img-group"> Costa Rica</li>
+                    </ul>
+                </div>
+                <div class="col l-ch bg-white up">
+                    <span class="group-name">Grupo F</span>
+                    <ul class="l-none">
+                        <li><img src="res/img/teams-flag/belgium-flag.png" alt="" class="img-group"> Bélgica</li>
+                        <li><img src="res/img/teams-flag/croacia-flag.png" alt="" class="img-group"> Croacia</li>
+                        <li><img src="res/img/teams-flag/moroco-flag.png" alt="" class="img-group"> Marruecos</li>
+                        <li><img src="res/img/teams-flag/canada-flag.jpg" alt="" class="img-group"> Canadá</li>
+                    </ul>
+                </div>
+                <div class="col l-ch bg-black up">
+                    <span class="group-name">Grupo G</span>
+                    <ul class="l-none">
+                        <li><img src="res/img/teams-flag/brasil-flag.png" alt="" class="img-group"> Brasil</li>
+                        <li><img src="res/img/teams-flag/suiza-flag.png" alt="" class="img-group"> Suiza</li>
+                        <li><img src="res/img/teams-flag/serbia-flag.png" alt="" class="img-group"> Serbia</li>
+                        <li><img src="res/img/teams-flag/camerun-flag.png" alt="" class="img-group"> Camerún</li>
+                    </ul>
+                </div>
+                <div class="col l-ch bg-white up">
+                    <span class="group-name">Grupo H</span>
+                    <ul class="l-none">
+                        <li><img src="res/img/teams-flag/portugal-flag.png" alt="" class="img-group"> Portugal</li>
+                        <li><img src="res/img/teams-flag/uruguay-flag.webp" alt="" class="img-group"> Uruguay</li>
+                        <li><img src="res/img/teams-flag/sur-corea-flag.png" alt="" class="img-group"> Corea del Sur
+                        </li>
+                        <li><img src="res/img/teams-flag/ghana-flag.png" alt="" class="img-group"> Ghana</li>
+                    </ul>
+                </div>
+            </div>
+            <h2 class="tx-center">Fase de Grupos</h2>
+            <div class="row">
+                <div class="col l-ch bg-group up">
+                    <span class="group-name">Grupo A</span><br>
+                    <span class="partid-title">Partidos</span><br>
+                    <span class="day">Lunes 21/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/senegal-flag.png" alt="Bandera de Senegal"
+                                class="img-group"> Senegal</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/paises_bajos-flg.png"
+                                alt="Bandera de Países Bajos" class="img-group"> Países Bajos</div>
+                        <div class="col"><span class="hour">07:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col">
+                            <img src="res/img/teams-flag/qatar-flag.png" alt="Bandera de Qatar" class="img-group"><span
+                                class="team-name">Qatar</span>
+                        </div>
+                        <div class="col"><span>VS</span></div>
+                        <div class="col"> <img src="res/img/teams-flag/ecuador-flag.png" alt="" class="img-group"><span
+                                class="team-name"> Ecuador</span></div>
+                        <div class="col"> <span class="hour">13:00 hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Viernes 25/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/qatar-flag.png" alt="Bandera de Qatar"
+                                class="img-group"> Qatar</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/senegal-flag.png" alt="Bandera de Senegal"
+                                class="img-group"> Senegal</div>
+                        <div class="col"><span class="hour">10:00 hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/ecuador-flag.png" alt="Bandera de Ecuador"
+                                class="img-group">Ecuador</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/paises_bajos-flg.png"
+                                alt="Bandera de Países Bajos" class="img-group">Países Bajos</div>
+                        <div class="col"><span class="hour">13:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Martes 29/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/qatar-flag.png" alt="Bandera de Qatar"
+                                class="img-group"> Qatar</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/paises_bajos-flg.png"
+                                alt="Bandera de Países Bajos" class="img-group">Países Bajos</div>
+                        <div class="col"><span class="hour">12:00 (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/ecuador-flag.png" alt="Bandera de Ecuador"
+                                class="img-group">Ecuador</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/senegal-flag.png" alt="Bandera de Senegal"
+                                class="img-group"> Senegal</div>
+                        <div class="col"><span class="hour">12:00hs (ARG)</span></div>
+                    </div>
+                </div>
+                <div class="col l-ch bg-group up">
+                    <span class="group-name">Grupo B</span><br>
+                    <span class="partid-title">Partidos</span><br>
+                    <span class="day">Lunes 21/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/england-flg.png" alt="Bandera de Inglaterra"
+                                class="img-group" align="left">Inglaterra</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/iran-flag.png" alt="Bandera de Iran"
+                                class="img-group" align="left">Iran</div>
+                        <div class="col"><span class="hour">10:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/usa-flag.png" alt="Bandera de Estados Unidos"
+                                class="img-group">Estados Unidos</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/wales-flag.png" alt="Bandera de Gales"
+                                class="img-group">Gales</div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Viernes 25/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/iran-flag.png" alt="Bandera de Iran"
+                                class="img-group">Iran</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/wales-flag.png" alt="Bandera de Gales"
+                                class="img-group">Gales</div>
+                        <div class="col"><span class="hour">07:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/england-flg.png" alt=""
+                                class="img-group">Inglaterra</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/usa-flag.png" alt="" class="img-group">Estados
+                            Unidos</div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Martes 29/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/england-flg.png" alt=""
+                                class="img-group">Inglaterra</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/wales-flag.png" alt="" class="img-group">Gales
+                        </div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/iran-flag.png" alt="" class="img-group">Iran</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/usa-flag.png" alt="" class="img-group">Estados
+                            Unidos</div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                </div>
+                <div class="col l-ch bg-group up">
+                    <span class="group-name">Grupo C</span><br>
+                    <span class="partid-title">Partidos</span><br>
+                    <span class="day">Martes 22/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/Argentina-flag.png" alt=""
+                                class="img-group">Argentina</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/arabia-saudita-flag.png" alt=""
+                                class="img-group">Arabia Saudita</div>
+                        <div class="col"><span class="hour">07:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/mexico-flag.png" alt="" class="img-group">Mexico
+                        </div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/polonia-flag.png" alt="" class="img-group">Polonia
+                        </div>
+                        <div class="col"><span class="hour">13:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Sábado 26/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/arabia-saudita-flag.png" alt=""
+                                class="img-group">Arabia Saudita</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/polonia-flag.png" alt="" class="img-group">Polonia
+                        </div>
+                        <div class="col"><span class="hour">10:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/Argentina-flag.png" alt=""
+                                class="img-group">Argentina</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/mexico-flag.png" alt="" class="img-group">Mexico
+                        </div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Miércoles 30/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/Argentina-flag.png" alt=""
+                                class="img-group">Argentina</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/polonia-flag.png" alt="" class="img-group">Polonia
+                        </div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/arabia-saudita-flag.png" alt=""
+                                class="img-group">Arabia saudita</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/mexico-flag.png" alt="" class="img-group">Mexico
+                        </div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                </div>
+                <div class="col l-ch bg-group up">
+                    <span class="group-name">Grupo D</span><br>
+                    <span class="partid-title">Partidos:</span><br>
+                    <span class="day">Martes 22/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/dinamarca-flag.png" alt=""
+                                class="img-group">Dinamarca</div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/tunez-flag.png" alt="" class="img-group">Túnez
+                        </div>
+                        <div class="col"><span class="hour">10:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/france-flag.png" alt="" class="img-group">Francia
+                        </div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/australia-flag.png" alt=""
+                                class="img-group">Australia</div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Sábado 26/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/australia-flag.png" alt=""
+                                class="img-group">Australia </div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/tunez-flag.png" alt="" class="img-group">Túnez
+                        </div>
+                        <div class="col"><span class="hour">07:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/france-flag.png" alt="" class="img-group">Francia
+                        </div>
+                        <div class="col">VS</div>
+                        <div class="col"><img src="res/img/teams-flag/dinamarca-flag.png" alt=""
+                                class="img-group">Dinamarca</div>
+                        <div class="col"><span class="hour">13:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Miércoles 30/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/australia-flag.png" alt=""
+                                class="img-group">Australia</div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/dinamarca-flag.png" alt=""
+                                class="img-group">Dinamarca</div>
+                        <div class="col"><span class="hour">12:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/france-flag.png" alt="" class="img-group">Francia
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/tunez-flag.png" alt="" class="img-group">Túnez
+                        </div>
+                        <div class="col"><span class="hour">12:00hs (ARG)</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l-ch bg-group up">
+                    <span class="group-name">Grupo E</span><br>
+                    <span class="partid-title">Partidos</span><br>
+                    <span class="day">Miércoles 23/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/germany-flag.png" alt=""
+                                class="img-group">Alemania</div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/japon-flag.png" alt="" class="img-group">Japón
+                        </div>
+                        <div class="col"><span class="hour">10:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/spain-flag.png" alt="" class="img-group">España
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/costa-rica-flag.png" alt=""
+                                class="img-group">Costa Rica</div>
+                        <div class="col"><span class="hour">13:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Domingo 27/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/costa-rica-flag.png" alt=""
+                                class="img-group">Costa Rica</div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/japon-flag.png" alt="" class="img-group">Japón
+                        </div>
+                        <div class="col"><span class="hour">07:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/spain-flag.png" alt="" class="img-group">España
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/germany-flag.png" alt=""
+                                class="img-group">Alemania</div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Jueves 01/12</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/spain-flag.png" alt="" class="img-group">España
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/japon-flag.png" alt="" class="img-group">Japón
+                        </div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/costa-rica-flag.png" alt=""
+                                class="img-group">Costa Rica</div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/germany-flag.png" alt=""
+                                class="img-group">Alemania</div>
+                        <div class="col"><span class="hour">16:00hs (Arg)</span></div>
+                    </div>
+                </div>
+                <div class="col l-ch bg-group up">
+                    <span class="group-name">Grupo F</span><br>
+                    <span class="partid-title">Partidos</span><br>
+                    <span class="day">Miércoles 23/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/moroco-flag.png" alt=""
+                                class="img-group">Marruecos</div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/croacia-flag.png" alt="" class="img-group">Croacia
+                        </div>
+                        <div class="col"><span class="hour">07:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/belgium-flag.png" alt="" class="img-group">Bélgica
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/canada-flag.jpg" alt="" class="img-group">Canadá
+                        </div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Domingo 27/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/belgium-flag.png" alt="" class="img-group">Bélgica
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/moroco-flag.png" alt=""
+                                class="img-group">Marruecos</div>
+                        <div class="col"><span class="hour">10:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/canada-flag.jpg" alt="" class="img-group">Canadá
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/croacia-flag.png" alt="" class="img-group">Croacia
+                        </div>
+                        <div class="col"><span class="hour">13:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Jueves 1/12</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/belgium-flag.png" alt="" class="img-group">Bélgica
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/croacia-flag.png" alt="" class="img-group">Croacia
+                        </div>
+                        <div class="col"><span class="hour">12:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/canada-flag.jpg" alt="" class="img-group">Canada
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/moroco-flag.png" alt=""
+                                class="img-group">Marruecos</div>
+                        <div class="col"><span class="hour">12:00hs (ARG)</span></div>
+                    </div>
+                </div>
+                <div class="col l-ch bg-group up">
+                    <span class="group-name">Grupo G</span><br>
+                    <span class="partid-title">Partidos</span><br>
+                    <span class="day">24/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/suiza-flag.png" alt="" class="img-group">Suiza
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/camerun-flag.png" alt="" class="img-group">Camerún
+                        </div>
+                        <div class="col"><span class="hour">07:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/brasil-flag.png" alt="" class="img-group">Brasil
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/serbia-flag.png" alt="" class="img-group">Serbia
+                        </div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Lunes 28/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/serbia-flag.png" alt="" class="img-group">Serbia
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/camerun-flag.png" alt="" class="img-group">Camerún
+                        </div>
+                        <div class="col"><span class="hour">07:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/brasil-flag.png" alt="" class="img-group">Brasil
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/suiza-flag.png" alt="" class="img-group">Suiza
+                        </div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Viernes 2/12</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/brasil-flag.png" alt="" class="img-group">Brasil
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/camerun-flag.png" alt="" class="img-group">Camerún
+                        </div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/serbia-flag.png" alt="" class="img-group">Serbia
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/suiza-flag.png" alt="" class="img-group">Suiza
+                        </div>
+                        <div class="col"><span class="hour">16:00hs</span></div>
+                    </div>
+                </div>
+                <div class="col l-ch bg-group up">
+                    <span class="group-name">Grupo H</span><br>
+                    <span class="partid-title">Partidos</span><br>
+                    <span class="day">Jueves 24/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/uruguay-flag.webp" alt=""
+                                class="img-group">Uruguay</div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/sur-corea-flag.png" alt="" class="img-group">Corea
+                            del Sur</div>
+                        <div class="col"><span class="hour">10:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/portugal-flag.png" alt=""
+                                class="img-group">Portugal</div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/ghana-flag.png" alt="" class="img-group">Ghana
+                        </div>
+                        <div class="col"><span class="hour">13:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Lunes 28/11</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/ghana-flag.png" alt="" class="img-group">Ghana
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/sur-corea-flag.png" alt="" class="img-group">Corea
+                            del Sur</div>
+                        <div class="col"><span class="hour">10:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/portugal-flag.png" alt=""
+                                class="img-group">Portugal</div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/uruguay-flag.webp" alt=""
+                                class="img-group">Uruguay</div>
+                        <div class="col"><span class="hour">16:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <span class="day">Viernes 2/12</span>
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/portugal-flag.png" alt=""
+                                class="img-group">Portugal</div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/sur-corea-flag.png" alt="" class="img-group">Corea
+                            del Sur</div>
+                        <div class="col"><span class="hour">12:00hs (ARG)</span></div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col"><img src="res/img/teams-flag/ghana-flag.png" alt="" class="img-group">Ghana
+                        </div>
+                        <div class="col">Vs</div>
+                        <div class="col"><img src="res/img/teams-flag/uruguay-flag.webp" alt=""
+                                class="img-group">Uruguay</div>
+                        <div class="col"><span class="hour">12:00hs (ARG)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="qatar">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Qatar</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Partidos por el momento (Total:3)</h3>
+                        <span>Contrincantes:</span>
+                        <ol>
+                            <li>Lunes 21/11 13:00hs (ARG): Ecuador</li>
+                            <li>Viernes 25/11 13:00hs (ARG): Senegal</li>
+                            <li>Martes 29/11 12:00hs (ARG): Países Bajos</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- MODAL ECUADOR-->
+        <div class="modal fade" id="ecuador">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Ecuador:</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Partidos por el momento (Total:3)</h3>
+                        <span>Contrincantes:</span>
+                        <ol>
+                            <li>Lunes 21/11 13:00hs (ARG): Qatar</li>
+                            <li>Viernes 25/11 13:00hs (ARG):Países Bajos </li>
+                            <li>Martes 29/11 12:00hs (ARG): Senegal</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- MODAL PAÍSES BAJOS -->
+        <div class="modal fade" id="pais_bajos">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Países Bajos</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Partidos por el momento (Total:3)</h3>
+                        <span>Contrincantes:</span>
+                        <ol>
+                            <li>Lunes 21/11: Senegal 07:00hs (ARG)</li>
+                            <li>Viernes 25/11: Ecuador 13:00hs (ARG)</li>
+                            <li>Martes 29/11: Qatar 12:00hs (ARG)</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- SENEGAL MODAL -->
+        <div class="modal fade" id="senegal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Senegal</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Partidos por el momento (Total:3)</h3>
+                        <span>Contrincantes:</span>
+                        <ol>
+                            <li>Lunes 21/11: Países Bajos 07:00hs (ARG)</li>
+                            <li>Viernes 25/11: Qatar 10:00hs (ARG)</li>
+                            <li>Martes 29/11: Ecuador  12:00hs (ARG)</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+
+</html>

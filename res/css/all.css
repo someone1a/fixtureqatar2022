@@ -1,0 +1,100 @@
+:root{
+    --bg-color:#e1c396;
+    --bg-font:Arial;
+    --bg-head:#8d1c3d;
+    --bg-foot:#b09677;
+    --l-color:#ffffff;
+    --bg-group:#92140c;
+}
+body{
+    font-family: var(--bg-font);
+    background-color: var(--bg-color);
+}
+.tx-center{
+    text-align: center;
+    align-items: center;
+}
+header img{
+    height: 120px;
+}
+header{
+    display: flex;
+    background-color: var(--bg-head);
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    color: var(--l-color);
+}
+nav{
+    background-color: var(--bg-head);
+    top: 0;
+    height: 25px;
+    position: sticky;
+    color: var(--l-color);
+}
+nav a{
+    color: #ffffff;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #b09677;
+    text-decoration: underline;
+}
+.tx-right{
+    text-align: right;
+}
+.bg-bordo{
+    background-color: #8d1c3d;
+    color: #ffffff;
+}
+.l-ch{
+    margin-left: 1.5ch;
+}
+.up{
+    margin-top: 1ch;
+}
+.l-none{
+    list-style: none;
+}
+.group-name{
+    font-size: 1.5rem;
+}
+.bg-green{
+    background-color: green;
+}
+.img-group{
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 10px;
+    border: solid black 1px;
+}
+.team-name{
+    font-size: 1em;
+}
+.hour{
+    color: yellowgreen;
+}
+.hr{
+    color: #ffffff;
+}
+.partid-title{
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+.bg-white{
+    background-color: #ffffff;
+}
+.bg-black{
+    background-color: black;
+    color: #ffffff;
+}
+.day{
+    color:white;
+    text-decoration: underline;
+}
+.bg-group{
+    background-color: var(--bg-group);
+    color: white;
+}
