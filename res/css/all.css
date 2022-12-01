@@ -98,3 +98,9 @@ a:hover{
     background-color: var(--bg-group);
     color: white;
 }
+.cont{
+    background-color: #b09677;
+    font-size: 2rem;
+    width: 30rem;
+    align-content: center;
+}
